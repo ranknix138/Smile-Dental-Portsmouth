@@ -97,15 +97,12 @@
     });
   }
 
-  if (modalLeadForm && modalLeadSuccess) {
-    modalLeadForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      modalLeadForm.style.display = 'none';
-      modalLeadSuccess.style.display = 'block';
-    });
+  function pushDataLayer(eventName, payload) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({ event: eventName }, payload || {}));
   }
 
-  // 4. Hero & Contact Page Forms
+  // 4. Lead, Hero & Contact Page Forms
   function wireLeadForm(formId, successId) {
     const form = document.getElementById(formId);
     const success = document.getElementById(successId);
@@ -114,10 +111,24 @@
       e.preventDefault();
       form.style.display = 'none';
       success.style.display = 'block';
+      pushDataLayer('lead_form_submit', { form_id: formId });
     });
   }
+  wireLeadForm('modal-lead-form', 'modal-lead-success');
   wireLeadForm('home-callback-form', 'home-callback-success');
   wireLeadForm('practice-enquiry-form', 'enquiry-success');
+
+  // 4a. Phone Call & Online Portal Click Tracking for GTM
+  document.addEventListener('click', function (e) {
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href') || '';
+    if (href.startsWith('tel:')) {
+      pushDataLayer('phone_call_click', { phone_number: href.slice(4), link_url: href });
+    } else if (href.indexOf('portal.dental') !== -1) {
+      pushDataLayer('online_booking_click', { link_url: href });
+    }
+  });
 
   // 4b. 3-in-1 Patient Experience Spotlight Tabs
   const spotTabs = document.querySelectorAll('[data-spot-tab]');
