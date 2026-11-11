@@ -51,75 +51,7 @@
     });
   }
 
-  // 3. Instant Callback / Lead Capture Modal
-  const leadModal = document.getElementById('lead-modal');
-  const closeLeadModal = document.getElementById('close-lead-modal');
-  const modalLeadForm = document.getElementById('modal-lead-form');
-  const modalLeadSuccess = document.getElementById('modal-lead-success');
-  const modalLeadTopic = document.getElementById('modal-lead-topic');
-
-  function openLeadModal(topic) {
-    if (!leadModal) return;
-    closeSheet();
-    if (modalLeadForm && modalLeadSuccess) {
-      modalLeadForm.style.display = '';
-      modalLeadSuccess.style.display = 'none';
-    }
-    if (modalLeadTopic && topic) {
-      for (let i = 0; i < modalLeadTopic.options.length; i++) {
-        if (modalLeadTopic.options[i].value === topic) {
-          modalLeadTopic.selectedIndex = i;
-          break;
-        }
-      }
-    }
-    leadModal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLead() {
-    if (!leadModal) return;
-    leadModal.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('[data-open-lead-modal]').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      openLeadModal(btn.getAttribute('data-lead-topic') || '');
-    });
-  });
-
-  if (closeLeadModal) closeLeadModal.addEventListener('click', closeLead);
-  if (leadModal) {
-    leadModal.addEventListener('click', function (e) {
-      if (e.target === leadModal) closeLead();
-    });
-  }
-
-  if (modalLeadForm && modalLeadSuccess) {
-    modalLeadForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      modalLeadForm.style.display = 'none';
-      modalLeadSuccess.style.display = 'block';
-    });
-  }
-
-  // 4. Hero & Contact Page Forms
-  function wireLeadForm(formId, successId) {
-    const form = document.getElementById(formId);
-    const success = document.getElementById(successId);
-    if (!form || !success) return;
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      form.style.display = 'none';
-      success.style.display = 'block';
-    });
-  }
-  wireLeadForm('home-callback-form', 'home-callback-success');
-  wireLeadForm('practice-enquiry-form', 'enquiry-success');
-
-  // 4b. 3-in-1 Patient Experience Spotlight Tabs
+  // 3. 3-in-1 Patient Experience Spotlight Tabs
   const spotTabs = document.querySelectorAll('[data-spot-tab]');
   const spotPanels = document.querySelectorAll('[data-spot-panel]');
   if (spotTabs.length && spotPanels.length) {
@@ -292,7 +224,6 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
       closeSheet();
-      closeLead();
       if (lightbox) lightbox.classList.remove('open');
       if (articleModal) articleModal.classList.remove('open');
     }
