@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=3">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
 </head>
 <body>
 
@@ -105,7 +105,7 @@
         <a href="contact.html" class="mobile-drawer-link">Contact &amp; Location <span>&rarr;</span></a>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:0.5rem;">
           <a href="tel:02393234105" class="btn btn-teal btn-sm">Call 02393 234105</a>
-          <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">Book Online</a>
+          <button type="button" class="btn btn-gold btn-sm" data-open-lead-modal>Request Callback</button>
         </div>
       </div>
     </div>
@@ -136,11 +136,11 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               Call 02393 234105
             </a>
-            <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
-              Book Dental Examination &rarr;
-            </a>
-            <a href="dental-emergencies.html" class="btn btn-outline-light">
-              Dental Emergencies
+            <button type="button" class="btn btn-gold" data-open-lead-modal data-lead-topic="New NHS / Private Patient">
+              Request Callback &rarr;
+            </button>
+            <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">
+              Book Online
             </a>
           </div>
 
@@ -195,13 +195,13 @@
           </div>
           <span class="tile-arrow">&pound;</span>
         </a>
-        <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="quick-convert-tile">
+        <button type="button" class="quick-convert-tile" data-open-lead-modal data-lead-topic="Orthodontic / Implant Consultation" style="text-align:left;width:100%;">
           <div>
-            <strong>Book Online Portal</strong>
-            <span>Instant appointment slots</span>
+            <strong>Free Coordinator Chat</strong>
+            <span>Ortho &amp; implant guidance</span>
           </div>
           <span class="tile-arrow">&#10003;</span>
-        </a>
+        </button>
       </div>
     </section>
 
@@ -211,7 +211,7 @@
         <div class="section-header">
           <span class="eyebrow">Comprehensive Dental Care</span>
           <h2 class="section-title">Popular <span class="accent">Dental Treatments</span></h2>
-          <p class="section-lead">Filter by treatment type below, view full details, call our clinic or book online in one tap.</p>
+          <p class="section-lead">Filter by treatment type below, view full details, or request a fast callback in one tap.</p>
         </div>
 
         <div class="cat-tabs-wrap" role="tablist" aria-label="Dental treatment categories">
@@ -238,7 +238,7 @@
             </div>
             <div class="service-card-footer">
               <a href="treatments.html#general" class="btn btn-outline btn-sm">Details</a>
-              <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">Book Online</a>
+              <button type="button" class="btn btn-gold btn-sm" data-open-lead-modal data-lead-topic="Routine Check-Up &amp; Hygiene">Book / Call</button>
             </div>
           </article>
 
@@ -255,7 +255,7 @@
             </div>
             <div class="service-card-footer">
               <a href="treatments.html#hygiene" class="btn btn-outline btn-sm">Details</a>
-              <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">Book Online</a>
+              <button type="button" class="btn btn-gold btn-sm" data-open-lead-modal data-lead-topic="Routine Check-Up &amp; Hygiene">Book Hygiene</button>
             </div>
           </article>
 
@@ -289,7 +289,7 @@
             </div>
             <div class="service-card-footer">
               <a href="treatments.html#bonding" class="btn btn-outline btn-sm">Details</a>
-              <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">Book Online</a>
+              <button type="button" class="btn btn-gold btn-sm" data-open-lead-modal data-lead-topic="Cosmetic Dentistry">Enquire</button>
             </div>
           </article>
 
@@ -306,7 +306,7 @@
             </div>
             <div class="service-card-footer">
               <a href="treatments.html#whitening" class="btn btn-outline btn-sm">Details</a>
-              <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">Book Online</a>
+              <button type="button" class="btn btn-gold btn-sm" data-open-lead-modal data-lead-topic="Cosmetic Dentistry">Book Whitening</button>
             </div>
           </article>
 
@@ -323,7 +323,7 @@
             </div>
             <div class="service-card-footer">
               <a href="treatments.html#fillings" class="btn btn-outline btn-sm">Details</a>
-              <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">Book Online</a>
+              <button type="button" class="btn btn-gold btn-sm" data-open-lead-modal data-lead-topic="General Dentistry">Book Visit</button>
             </div>
           </article>
 
@@ -340,7 +340,7 @@
             </div>
             <div class="service-card-footer">
               <a href="treatments.html#crowns" class="btn btn-outline btn-sm">Details</a>
-              <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">Book Online</a>
+              <button type="button" class="btn btn-gold btn-sm" data-open-lead-modal data-lead-topic="General Dentistry">Enquire</button>
             </div>
           </article>
 
@@ -406,11 +406,11 @@
             <h3 style="font-size:2rem;margin-bottom:0.6rem;">Gentle Support From Your Very First Visit</h3>
             <p class="section-lead">We take time to listen to anxious or nervous patients, explain every step clearly and share transparent written NHS or private treatment plans upfront.</p>
             <div class="feature-list">
-              <div class="feature-row"><div class="feature-check">&#10003;</div><div>Simple registration &amp; direct online booking</div></div>
+              <div class="feature-row"><div class="feature-check">&#10003;</div><div>Easy 2-step registration &amp; instant callback</div></div>
               <div class="feature-row"><div class="feature-check">&#10003;</div><div>Gentle pacing &amp; regular comfort check-ins</div></div>
             </div>
             <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
-              <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-gold">Book Online</a>
+              <button type="button" class="btn btn-gold" data-open-lead-modal data-lead-topic="New NHS / Private Patient">Register Now</button>
               <a href="new-patients.html" class="btn btn-outline">New Patient Guide</a>
             </div>
           </div>
@@ -427,7 +427,7 @@
               <div class="feature-row"><div class="feature-check">&#10003;</div><div>Protects gum health &amp; freshens breath</div></div>
             </div>
             <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
-              <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-gold">Book Online</a>
+              <button type="button" class="btn btn-gold" data-open-lead-modal data-lead-topic="Routine Check-Up &amp; Hygiene">Book Hygiene</button>
               <a href="treatments.html#hygiene" class="btn btn-outline">Read Airflow&reg; FAQs</a>
             </div>
           </div>
@@ -444,7 +444,7 @@
               <div class="feature-row"><div class="feature-check">&#10003;</div><div>Composite Bonding &pound;350</div></div>
             </div>
             <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
-              <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-gold">Book Online</a>
+              <button type="button" class="btn btn-gold" data-open-lead-modal data-lead-topic="Cosmetic Dentistry">Request Free Consult</button>
               <a href="nhs-fees.html" class="btn btn-outline">See All Fees</a>
             </div>
           </div>
@@ -452,43 +452,70 @@
       </div>
     </section>
 
-    <!-- 5. NHS FEES SNAPSHOT + PORTSMOUTH CLINIC HOURS & LOCATION -->
+    <!-- 5. DEDICATED CALLBACK LEAD FORM + NHS FEES & CLINIC LOCATION -->
     <section id="quick-callback" class="section">
       <div class="container">
-        <div class="split-grid" style="align-items:stretch;">
-          <!-- Left: Clear NHS & Private Pricing Snapshot -->
-          <div class="card-box">
-            <div style="display:flex;align-items:center;justify-content:space-between;gap:0.75rem;margin-bottom:0.85rem;">
-              <div>
-                <span class="eyebrow nhs" style="margin-bottom:0.25rem;">NHS Dental Charges</span>
-                <h2 style="font-size:1.75rem;">Clear NHS Band Pricing</h2>
+        <div class="split-grid" style="align-items:start;">
+          <!-- Left: Dedicated Clean Callback Lead Card -->
+          <div class="card-box" style="border-color:#ead9b5;background:linear-gradient(180deg,#ffffff 0%,#fcfaf6 100%);">
+            <span class="eyebrow">30-Second Callback</span>
+            <h2 class="section-title" style="font-size:2.1rem;">Request an <span class="accent">Appointment Call</span></h2>
+            <p style="font-size:0.86rem;color:#475569;margin-bottom:1.1rem;">Leave your name and phone number &mdash; our Portsmouth reception team will call you straight back.</p>
+
+            <form id="home-callback-form" class="form-grid">
+              <div class="form-row-2">
+                <div><label class="form-label" for="hc-name">Full Name *</label><input id="hc-name" type="text" class="form-input" required placeholder="Your name"></div>
+                <div><label class="form-label" for="hc-phone">Phone Number *</label><input id="hc-phone" type="tel" class="form-input" required placeholder="07xxx xxxxxx"></div>
               </div>
-              <a href="nhs-fees.html" class="btn btn-outline btn-sm">Full Fees &rarr;</a>
+              <div>
+                <label class="form-label" for="hc-topic">Treatment / Enquiry</label>
+                <select id="hc-topic" class="form-input">
+                  <option>New NHS / Private Patient</option>
+                  <option>Same-Day Dental Emergency</option>
+                  <option>Routine Check-Up &amp; Airflow&reg; Hygiene</option>
+                  <option>Teeth Whitening / Composite Bonding</option>
+                  <option>Free Orthodontic / Implant Consultation</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-gold" style="width:100%;">Get Fast Callback &rarr;</button>
+            </form>
+
+            <div id="home-callback-success" style="display:none;padding:1.15rem;border-radius:12px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;">
+              <strong style="display:block;font-size:0.98rem;margin-bottom:0.25rem;">Callback Request Received!</strong>
+              <p style="font-size:0.84rem;margin-bottom:0.8rem;">Our team will call you shortly. Need urgent help right now?</p>
+              <a href="tel:02393234105" class="btn btn-teal btn-sm">Call 02393 234105</a>
             </div>
-            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.65rem;font-size:0.84rem;margin-bottom:1rem;">
-              <div style="padding:0.7rem 0.85rem;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;"><span style="color:#64748b;display:block;font-size:0.72rem;font-weight:700;">Urgent / Band 1</span><strong style="color:#005eb8;font-size:1.2rem;">&pound;27.90</strong></div>
-              <div style="padding:0.7rem 0.85rem;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;"><span style="color:#64748b;display:block;font-size:0.72rem;font-weight:700;">Band 2 Treatment</span><strong style="color:#005eb8;font-size:1.2rem;">&pound;76.60</strong></div>
-              <div style="padding:0.7rem 0.85rem;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;"><span style="color:#64748b;display:block;font-size:0.72rem;font-weight:700;">Band 3 Crown/Bridge</span><strong style="color:#005eb8;font-size:1.2rem;">&pound;332.10</strong></div>
-              <div style="padding:0.7rem 0.85rem;border-radius:12px;background:#f0fdfa;border:1px solid #99f6e4;"><span style="color:#0f766e;display:block;font-size:0.72rem;font-weight:700;">Ortho / Implant Consult</span><strong style="color:#0d9488;font-size:1.2rem;">FREE</strong></div>
-            </div>
-            <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="width:100%;">Book Online Appointment &rarr;</a>
           </div>
 
-          <!-- Right: Portsmouth Clinic Hours, Address & Direct Call -->
-          <div class="card-box" style="display:flex;flex-direction:column;justify-content:space-between;">
-            <div>
-              <span class="eyebrow" style="margin-bottom:0.35rem;">Central Portsmouth</span>
-              <h2 style="font-size:1.75rem;margin-bottom:0.45rem;">Portsmouth Clinic &amp; Hours</h2>
-              <p style="font-size:0.88rem;color:#475569;margin-bottom:0.85rem;">14 Isambard Brunel Road, Portsmouth, Hampshire, PO1 2DU</p>
-              <div style="display:grid;gap:0.35rem;font-size:0.85rem;color:#334155;margin-bottom:1.1rem;">
-                <div style="display:flex;justify-content:space-between;border-bottom:1px solid #f1f5f9;padding-bottom:0.25rem;"><span>Monday &ndash; Thursday</span><strong>9:00am &ndash; 6:00pm</strong></div>
-                <div style="display:flex;justify-content:space-between;border-bottom:1px solid #f1f5f9;padding-bottom:0.25rem;"><span>Friday</span><strong>8:00am &ndash; 5:00pm</strong></div>
-                <div style="display:flex;justify-content:space-between;color:#64748b;"><span>Saturday &amp; Sunday</span><span>Closed</span></div>
+          <!-- Right: NHS Bands Snapshot + Clinic Hours & Address -->
+          <div style="display:grid;gap:1rem;">
+            <div class="card-box">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:0.75rem;margin-bottom:0.75rem;">
+                <div>
+                  <span class="eyebrow nhs" style="margin-bottom:0.25rem;">NHS Dental Charges</span>
+                  <h3 style="font-size:1.5rem;">Clear NHS Band Pricing</h3>
+                </div>
+                <a href="nhs-fees.html" class="btn btn-outline btn-sm">Full Fees &rarr;</a>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.6rem;font-size:0.84rem;">
+                <div style="padding:0.65rem 0.8rem;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;"><span style="color:#64748b;display:block;font-size:0.72rem;font-weight:700;">Urgent / Band 1</span><strong style="color:#005eb8;font-size:1.15rem;">&pound;27.90</strong></div>
+                <div style="padding:0.65rem 0.8rem;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;"><span style="color:#64748b;display:block;font-size:0.72rem;font-weight:700;">Band 2 Treatment</span><strong style="color:#005eb8;font-size:1.15rem;">&pound;76.60</strong></div>
+                <div style="padding:0.65rem 0.8rem;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;"><span style="color:#64748b;display:block;font-size:0.72rem;font-weight:700;">Band 3 Crown/Bridge</span><strong style="color:#005eb8;font-size:1.15rem;">&pound;332.10</strong></div>
+                <div style="padding:0.65rem 0.8rem;border-radius:12px;background:#f0fdfa;border:1px solid #99f6e4;"><span style="color:#0f766e;display:block;font-size:0.72rem;font-weight:700;">Ortho / Implant Consult</span><strong style="color:#0d9488;font-size:1.15rem;">FREE</strong></div>
               </div>
             </div>
-            <div style="display:flex;flex-wrap:wrap;gap:0.6rem;">
-              <a href="tel:02393234105" class="btn btn-teal">Call 02393 234105</a>
-              <a href="https://www.google.com/maps/search/?api=1&query=14+Isambard+Brunel+Road+Portsmouth+PO1+2DU" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Directions &rarr;</a>
+
+            <div class="card-box">
+              <h3 style="font-size:1.45rem;margin-bottom:0.45rem;">Portsmouth Clinic &amp; Hours</h3>
+              <p style="font-size:0.86rem;color:#475569;margin-bottom:0.65rem;">14 Isambard Brunel Road, Portsmouth, PO1 2DU</p>
+              <div style="display:grid;gap:0.25rem;font-size:0.82rem;color:#334155;margin-bottom:0.9rem;">
+                <div style="display:flex;justify-content:space-between;"><span>Mon &ndash; Thu</span><strong>9:00am &ndash; 6:00pm</strong></div>
+                <div style="display:flex;justify-content:space-between;"><span>Friday</span><strong>8:00am &ndash; 5:00pm</strong></div>
+              </div>
+              <div style="display:flex;flex-wrap:wrap;gap:0.55rem;">
+                <a href="tel:02393234105" class="btn btn-teal btn-sm">Call 02393 234105</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=14+Isambard+Brunel+Road+Portsmouth+PO1+2DU" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Directions &rarr;</a>
+              </div>
             </div>
           </div>
         </div>
@@ -687,7 +714,7 @@
       <!-- Instant Mobile Conversion Actions -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.55rem;margin-top:0.85rem;">
         <a href="tel:02393234105" class="btn btn-teal btn-sm">Call 02393 234105</a>
-        <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">Book Online</a>
+        <button type="button" class="btn btn-gold btn-sm" data-open-lead-modal>Request Callback</button>
       </div>
 
       <div class="sheet-grid">
@@ -705,6 +732,49 @@
         <a href="referrals.html" class="sheet-item"><span>CBCT / OPG Referrals</span><span>&rarr;</span></a>
         <a href="about.html" class="sheet-item"><span>About &amp; Gallery</span><span>&rarr;</span></a>
         <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="sheet-item" style="background:#fbf7ee;border-color:#ead9b5;"><span>Online Portal Booking</span><span>&#8599;</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSTANT CALLBACK / LEAD MODAL -->
+  <div id="lead-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title">
+    <div class="modal-card">
+      <button id="close-lead-modal" class="modal-close" aria-label="Close modal">&times;</button>
+      <span class="eyebrow">30-Second Callback Request</span>
+      <h2 id="lead-modal-title" style="font-size:1.85rem;margin-bottom:0.35rem;">Book Your Visit or Request a Call</h2>
+      <p style="font-size:0.86rem;color:#475569;margin-bottom:1.1rem;">Enter your details and our Portsmouth reception team will contact you promptly to arrange your appointment.</p>
+
+      <form id="modal-lead-form" class="form-grid">
+        <div>
+          <label class="form-label" for="modal-lead-name">Full Name *</label>
+          <input id="modal-lead-name" type="text" class="form-input" required placeholder="Your full name">
+        </div>
+        <div>
+          <label class="form-label" for="modal-lead-phone">UK Phone Number *</label>
+          <input id="modal-lead-phone" type="tel" class="form-input" required placeholder="07xxx xxxxxx">
+        </div>
+        <div>
+          <label class="form-label" for="modal-lead-topic">How Can We Help? *</label>
+          <select id="modal-lead-topic" class="form-input">
+            <option value="New NHS / Private Patient">New NHS / Private Patient Registration</option>
+            <option value="Dental Emergency">Same-Day Dental Emergency</option>
+            <option value="Routine Check-Up &amp; Hygiene">Routine Check-Up &amp; Airflow&reg; Hygiene</option>
+            <option value="Cosmetic Dentistry">Cosmetic Dentistry (Whitening / Bonding)</option>
+            <option value="General Dentistry">White Fillings / Crowns / Root Canal</option>
+            <option value="Orthodontic / Implant Consultation">Free Treatment Coordinator Consultation</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-gold" style="width:100%;">Request Immediate Callback &rarr;</button>
+        <a href="tel:02393234105" class="btn btn-teal" style="width:100%;">Or Call Now: 02393 234105</a>
+      </form>
+
+      <div id="modal-lead-success" style="display:none;padding:1.25rem;border-radius:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;">
+        <strong style="display:block;font-size:1.05rem;margin-bottom:0.35rem;">Thank You &mdash; Request Received</strong>
+        <p style="font-size:0.86rem;margin-bottom:0.9rem;">Our Portsmouth team will call you shortly. Need an instant slot or urgent pain relief? Call us directly or open the patient portal.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.55rem;">
+          <a href="tel:02393234105" class="btn btn-teal btn-sm">Call 02393 234105</a>
+          <a href="https://one-smile-dental.portal.dental/practices/portsmouth" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">Book Online Portal</a>
+        </div>
       </div>
     </div>
   </div>
@@ -732,6 +802,6 @@
     </div>
   </div>
 
-  <script src="assets/js/main.js?v=3" defer></script>
+  <script src="assets/js/main.js?v=4" defer></script>
 </body>
 </html>
